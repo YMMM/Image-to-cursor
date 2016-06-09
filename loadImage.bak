@@ -1,0 +1,6 @@
+#lang racket
+(require racket/gui/base)
+(define bm (make-object bitmap% 16 16 #t #f))
+    (define bm2 (read-bitmap "plusZoom.png"))
+    (send (send bm make-dc) draw-bitmap bm2 0 0)
+    (send bm save-file "t2.png" 'png)
